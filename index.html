@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atul Kumar Singh | Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-anim { animation: float 3s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans">
+
+    <nav class="fixed w-full z-50 glass top-0 left-0">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text tracking-tighter">AKS.</a>
+            <div class="hidden md:flex space-x-8 font-medium text-sm uppercase tracking-widest">
+                <a href="#about" class="hover:text-blue-400 transition">About</a>
+                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+                <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+                <a href="#contact" class="hover:text-blue-400 transition border border-blue-400 px-4 py-1 rounded-full">Contact</a>
+            </div>
+            <button class="md:hidden text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden glass flex flex-col p-4 space-y-4 text-center">
+            <a href="#about" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+            <a href="#skills" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Skills</a>
+            <a href="#projects" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projects</a>
+            <a href="#contact" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+        </div>
+    </nav>
+
+    <header class="min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 text-center md:text-left">
+                <h2 class="text-blue-400 font-mono mb-4 text-lg">Hi, I am</h2>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Atul Kumar Singh</h1>
+                <p class="text-xl md:text-2xl text-slate-400 mb-8 max-w-xl">
+                    Full Stack Developer specializing in <span class="text-white border-b-2 border-purple-500">Java & Spring Boot</span> architecture.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-bold transition">View My Work</a>
+                    <div class="flex gap-4 items-center ml-4">
+                        <a href="https://github.com/AtulSingh11-0" target="_blank" class="text-3xl hover:text-blue-400"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/atul-singh11" target="_blank" class="text-3xl hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 flex justify-center relative">
+                <div class="absolute w-64 h-64 bg-blue-500 rounded-full filter blur-[100px] opacity-20 animate-pulse"></div>
+                <img id="profile-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=500&h=500" alt="Atul Kumar Singh" class="w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover border-4 border-slate-700 z-10 float-anim shadow-2xl">
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 px-4 bg-slate-800/50">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-3xl font-bold mb-12 text-center underline decoration-blue-500 underline-offset-8">About Me</h3>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <p class="text-slate-300 leading-relaxed text-lg">
+                        I am currently pursuing a <span class="text-white font-semibold">Bachelor of Computer Applications</span> at Meghnad Saha Institute Of Technology (2022-2025). 
+                        My focus lies in building scalable backend systems and high-performance APIs.
+                    </p>
+                    <p class="text-slate-300 leading-relaxed">
+                        I've maintained a <span class="text-blue-400">CGPA of 7.40</span> and have a deep interest in Object-Oriented Programming, Database Management, and Distributed Systems.
+                    </p>
+                </div>
+                <div class="glass p-6 rounded-xl">
+                    <h4 class="font-bold mb-4 text-blue-400 uppercase text-xs tracking-widest">Education Details</h4>
+                    <div class="space-y-4">
+                        <div class="border-l-2 border-blue-500 pl-4">
+                            <p class="font-bold">Meghnad Saha Institute Of Technology</p>
+                            <p class="text-sm text-slate-400">BCA | Aug 2022 - July 2025</p>
+                        </div>
+                        <div class="pt-4">
+                            <p class="text-sm font-semibold mb-2">Relevant Coursework:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-700 px-3 py-1 rounded text-xs">DSA</span>
+                                <span class="bg-slate-700 px-3 py-1 rounded text-xs">Operating Systems</span>
+                                <span class="bg-slate-700 px-3 py-1 rounded text-xs">DBMS</span>
+                                <span class="bg-slate-700 px-3 py-1 rounded text-xs">Networking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h3 class="text-3xl font-bold mb-16 underline decoration-purple-500 underline-offset-8">Technical Expertise</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
+                <div class="glass p-6 rounded-xl hover:translate-y-[-5px] transition">
+                    <i class="fas fa-code text-blue-400 mb-4 text-2xl"></i>
+                    <h4 class="font-bold mb-4">Languages</h4>
+                    <ul class="text-slate-400 space-y-2 text-sm">
+                        <li>Java (Core & Advanced)</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>SQL & C</li>
+                    </ul>
+                </div>
+                <div class="glass p-6 rounded-xl hover:translate-y-[-5px] transition">
+                    <i class="fas fa-layer-group text-purple-400 mb-4 text-2xl"></i>
+                    <h4 class="font-bold mb-4">Frameworks</h4>
+                    <ul class="text-slate-400 space-y-2 text-sm">
+                        <li>Spring Boot / Security</li>
+                        <li>Node.js / Express</li>
+                        <li>JWT Authentication</li>
+                        <li>Socket.io</li>
+                    </ul>
+                </div>
+                <div class="glass p-6 rounded-xl hover:translate-y-[-5px] transition">
+                    <i class="fas fa-database text-cyan-400 mb-4 text-2xl"></i>
+                    <h4 class="font-bold mb-4">Databases</h4>
+                    <ul class="text-slate-400 space-y-2 text-sm">
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+                <div class="glass p-6 rounded-xl hover:translate-y-[-5px] transition">
+                    <i class="fas fa-cloud-upload-alt text-orange-400 mb-4 text-2xl"></i>
+                    <h4 class="font-bold mb-4">Tools & Cloud</h4>
+                    <ul class="text-slate-400 space-y-2 text-sm">
+                        <li>Docker & Git</li>
+                        <li>Railway & Render</li>
+                        <li>Cloudinary & Vercel</li>
+                        <li>Postman</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-4 bg-slate-800/30">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold mb-16 text-center underline decoration-blue-500 underline-offset-8">Featured Projects</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="glass rounded-2xl overflow-hidden flex flex-col group">
+                    <div class="h-48 bg-gradient-to-br from-blue-900 to-slate-800 flex items-center justify-center p-6 text-center">
+                        <i class="fas fa-portal-enter text-5xl text-blue-400 mb-2 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold">Paridhi Portal 2025</h4>
+                            <span class="text-xs text-blue-400 font-mono">March 2025</span>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-4">High-performance tech-fest portal handling 3,000+ attendees.</p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li>• API latency reduced by 98% (600ms to 6ms)</li>
+                            <li>• Indexing boosted fetch speed by 40%</li>
+                            <li>• 60% smaller secure Docker images</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-blue-300">Java</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-blue-300">MySQL</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-blue-300">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass rounded-2xl overflow-hidden flex flex-col group">
+                    <div class="h-48 bg-gradient-to-br from-purple-900 to-slate-800 flex items-center justify-center p-6 text-center">
+                        <i class="fas fa-book text-5xl text-purple-400 mb-2 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold">Book Store App</h4>
+                            <span class="text-xs text-purple-400 font-mono">June 2024</span>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-4">Scalable RESTful API documentation and media delivery system.</p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li>• Handled 10,000+ requests/day in tests</li>
+                            <li>• 99.9% uptime with Docker deployment</li>
+                            <li>• Swagger implementation reduced onboarding by 40%</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-purple-300">MongoDB</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-purple-300">Swagger</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-purple-300">Spring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="glass rounded-2xl overflow-hidden flex flex-col group">
+                    <div class="h-48 bg-gradient-to-br from-cyan-900 to-slate-800 flex items-center justify-center p-6 text-center">
+                        <i class="fas fa-comments text-5xl text-cyan-400 mb-2 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold">Real-time Chat App</h4>
+                            <span class="text-xs text-cyan-400 font-mono">Nov 2024</span>
+                        </div>
+                        <p class="text-slate-400 text-sm mb-4">Low-latency messaging platform using WebSockets.</p>
+                        <ul class="text-xs text-slate-500 space-y-2 mb-6">
+                            <li>• Supports 200+ concurrent active users</li>
+                            <li>• 80ms reduction in message latency</li>
+                            <li>• Optimized indexing for 5,000+ messages</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-cyan-300">Node.js</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-cyan-300">Socket.io</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-cyan-300">Express</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-3xl font-bold mb-16 text-center underline decoration-green-500 underline-offset-8">Experience</h3>
+            <div class="relative border-l-2 border-slate-700 ml-4 pl-8 space-y-12">
+                <div class="relative">
+                    <div class="absolute w-4 h-4 bg-green-500 rounded-full -left-[41px] top-1 shadow-[0_0_10px_rgba(34,197,94,0.8)]"></div>
+                    <h4 class="text-xl font-bold">Megatronix - Backend Developer</h4>
+                    <p class="text-green-400 mb-2">Aug 2023 - Present</p>
+                    <p class="text-slate-400 leading-relaxed">
+                        Leading the development for <span class="text-white">PARIDHI</span>, East India’s largest techfest at MSIT. 
+                        Managing complex data flow for 3,000+ registrants and integrating 3rd party identity providers for streamlined 
+                        authentication of 500+ daily signups.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-24 px-4 bg-black/50">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h3 class="text-4xl font-bold mb-6">Let's Connect</h3>
+                <p class="text-slate-400 mb-8">Currently open to internship opportunities and full-stack developer roles starting 2025.</p>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-envelope text-blue-400"></i>
+                        <a href="mailto:cocatulll@gmail.com" class="hover:text-blue-400">cocatulll@gmail.com</a>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-phone text-blue-400"></i>
+                        <span>+91-9123766255</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-map-marker-alt text-blue-400"></i>
+                        <span>Kolkata, West Bengal</span>
+                    </div>
+                </div>
+            </div>
+            <div class="glass p-8 rounded-2xl">
+                <form class="space-y-4">
+                    <input type="text" placeholder="Name" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500">
+                    <input type="email" placeholder="Email" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500">
+                    <textarea placeholder="Message" rows="4" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500"></textarea>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition shadow-lg shadow-blue-900/20">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="mt-20 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+            <p>&copy; 2024 Atul Kumar Singh. Built with Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const githubUser = 'AtulSingh11-0';
+            const profileImg = document.getElementById('profile-img');
+            
+            fetch(`https://api.github.com/users/${githubUser}`)
+                .then(response => {
+                    if (!response.ok) throw new Error('Not found');
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.avatar_url) {
+                        profileImg.src = data.avatar_url;
+                    }
+                })
+                .catch(err => {
+                    console.log('Using default image', err);
+                    profileImg.src = 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80';
+                });
+        });
+    </script>
+</body>
+</html>
